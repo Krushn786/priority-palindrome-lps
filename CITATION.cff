@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "A Novel O(n) Algorithm for the Longest Palindromic Substring"
+message: "If you use this work, please cite it using the metadata below."
+type: software
+
+authors:
+  - family-names: "Gor"
+    given-names: "Krushn"
+
+license: MIT
+
+version: "1.0.0"
+date-released: "2025-11-18"
+
+repository-code: "https://github.com/<your-username>/priority-palindrome-lps"
+
+abstract: >
+  This repository introduces a priority-based O(n) algorithm for the Longest Palindromic Substring (LPS) problem.
+  The method is based on best-case potential bounds, center-outward priority ordering, and early termination, and
+  does not use symmetry-based radius reuse as in Manacher’s algorithm. It provides an intuitive and practical
+  linear-time alternative supported by clear reasoning and implementation.

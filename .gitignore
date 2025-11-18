@@ -1,0 +1,28 @@
+# Java compiled class files
+*.class
+
+# Java archives
+*.jar
+*.war
+*.ear
+
+# IDE / Editor settings
+.idea/
+*.iml
+.vscode/
+.project
+.settings/
+.classpath
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+
+# Build artifacts
+/bin/
+/out/
+/target/
