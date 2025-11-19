@@ -12,7 +12,7 @@ license: MIT
 version: "1.0.0"
 date-released: "2025-11-18"
 
-repository-code: "https://github.com/<your-username>/priority-palindrome-lps"
+repository-code: "https://github.com/krushn786/priority-palindrome-lps"
 
 abstract: >
   This repository introduces a priority-based O(n) algorithm for the Longest Palindromic Substring (LPS) problem.
