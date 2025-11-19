@@ -41,16 +41,12 @@ priority-palindrome-lps/
 2. **Compute bestCase[i] for each center**  
 bestCase[i] = 2 * min(i, n - 1 - i) + 1
 
-markdown
-Copy code
 This forms a symmetric pyramid:  
 `1, 3, 5, …, largest …, 5, 3, 1`
 
 3. **Generate a priority traversal order**  
 mid, mid-1, mid+1, mid-2, mid+2, ...
 
-markdown
-Copy code
 This implicitly visits centers in descending best-case potential.
 
 4. **Expand around each center**  
