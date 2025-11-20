@@ -1,0 +1,126 @@
+======================================
+Input Length: 0
+Input String: 
+Result Length: 0
+Time: 0 ms
+Comparisons: 0
+Palindrome: 
+======================================
+
+======================================
+Input Length: 1
+Input String:  
+Result Length: 1
+Time: 0 ms
+Comparisons: 0
+Palindrome:  
+======================================
+
+======================================
+Input Length: 2
+Input String: aa
+Result Length: 2
+Time: 0 ms
+Comparisons: 3
+Palindrome: aa
+======================================
+
+======================================
+Input Length: 3
+Input String: aba
+Result Length: 3
+Time: 0 ms
+Comparisons: 6
+Palindrome: aba
+======================================
+
+======================================
+Input Length: 5
+Input String: babad
+Result Length: 3
+Time: 0 ms
+Comparisons: 13
+Palindrome: bab
+======================================
+
+======================================
+Input Length: 4
+Input String: cbbd
+Result Length: 2
+Time: 0 ms
+Comparisons: 10
+Palindrome: bb
+======================================
+
+======================================
+Input Length: 7
+Input String: racecar
+Result Length: 7
+Time: 0 ms
+Comparisons: 20
+Palindrome: racecar
+======================================
+
+======================================
+Input Length: 10000
+Input String (truncated): ajaxeejilmlnqwdznatcqobueeomxikdykafgjyzzsuuvvocitxodjawigdtwijcgkvdoozikbsglvmdmktytjlmifqbwwmlpcsoqshdytwtgpsalccdzrvpiexoappfvtxeprwpozzfvxyzhnxymlcfrsokyarxkwfujfcpgmnhgjeascerncmczyrlkczfumswk...
+Result Length: 6
+Time: 3 ms
+Comparisons: 30809
+Palindrome: pgeegp
+======================================
+
+======================================
+Input Length: 50000
+Input String (truncated): fxayulzdzcpxhbvkiakbdodvartjfdrakfrvhldmldrbvdtdjpeijhxhxgyxsmrmvidiggasphqhmkwderrecewsxijjtojklgyznardsajhxcgonnkddgpygyxklbbiyyvjrweowhuwqjuaaadfvpjrstcgapbuysrlthcwzidzwdhsxlojxcruvqjagekjtgong...
+Result Length: 9
+Time: 10 ms
+Comparisons: 153964
+Palindrome: blgsssglb
+======================================
+
+======================================
+Input Length: 100000
+Input String (truncated): nyovoqslrvpuhaayfgdjkvvuahvosyydfkkmgwxaqmoeknohbbcwnwdjzwoiqamktseayevyomuoltflcshwydraoptsbyajjdvovhtmgaymklrwslyhabzotathnjkfycdmvmpvyvzooyequokhgaxxqdsldinnuncldwtbopqwipejclshloppwoxoaahozoouw...
+Result Length: 8
+Time: 5 ms
+Comparisons: 307814
+Palindrome: yamffmay
+======================================
+
+======================================
+Input Length: 200000
+Input String (truncated): wrsikehazngsjjbpvxngayftgopfdffgtcwfklsdkkznlfsmhzhzhnodqjudspvojhsvvkbqrpdlmizdilqjuhxsxpavokrnyngwxqkbakgxsfefipofqomgvxiixqtbyymjpdylxoehhvoeelctzzybkbesiamciwkhkixhuxqxyjfqixosogcllsjcogidybgms...
+Result Length: 9
+Time: 70 ms
+Comparisons: 615934
+Palindrome: hxpgkgpxh
+======================================
+
+======================================
+Input Length: 1000000
+Input String (truncated): fdvmptxuyoqgmlyzwruxvprnmxhigcmxoxwanhftfymgvtglmjgkbdhdpyyksagxfyhnrafohiwgldvbswtkxdnkcyplvwgkshyqkjhmaaujfdkmkrgcdweirpfgwhsppnfxbwvaobtqajkelwzxmmvbeucklwzhkrbqtmqgxpiffdgzqicvybxklnbmhqimjvxtn...
+Result Length: 9
+Time: 37 ms
+Comparisons: 3078155
+Palindrome: sxqovoqxs
+======================================
+
+======================================
+Input Length: 10000000
+Input String (truncated): einvibecvkttjoigtucbjypzkontiwjyixdvazehdviruvhwlyhsvghvreynshpfjrxxhikvjltkejyyaycmetyohrncxnmmhasdjlcfytxasfmhvvhyajofwvfxnpgzfxswghpvnnuegmtqfxmawkxjftaiqeaznkvkolsknewhcoyutgvumwzrujwneuwformxb...
+Result Length: 11
+Time: 269 ms
+Comparisons: 30783407
+Palindrome: bvstrdrtsvb
+======================================
+
+======================================
+Input Length: 50000000
+Input String (truncated): ymivnzjmusrngydnwzsexfyqjkhxeruwutfazcbjjdccteayvmtmcqimzqongwdhwhbcbowytkunquugzjiooltccpnqsqjkexxohzxsbnowygnqhaidrsymrcdxzfqqdcrsnvyombptikiagghyjpoazvmjfddyuklelqxcqjcdeudfmqwwszdohrrygnkfnywrl...
+Result Length: 13
+Time: 1645 ms
+Comparisons: 153912616
+Palindrome: exkyivvviykxe
+======================================
+
