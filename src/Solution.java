@@ -1,17 +1,30 @@
 /**
  * Priority-based algorithm for Longest Palindromic Substring.
- * 
- * Key optimization: Updates bestCase array with actual found lengths
- * to enable accurate early termination.
+ * WITH DETAILED COMPARISON TRACKING
  *
  * Author: Krushn Gor
  */
 public class Solution {
 
     private long comparisonCount = 0L;
+    private long outerLoopCount = 0L;
+    private long positionChecks = 0L;
+    private long earlyTerminations = 0L;
 
     public long getComparisonCount() {
         return comparisonCount;
+    }
+
+    public long getOuterLoopCount() {
+        return outerLoopCount;
+    }
+
+    public long getPositionChecks() {
+        return positionChecks;
+    }
+
+    public long getEarlyTerminations() {
+        return earlyTerminations;
     }
 
     public static int getTransformedLength(int originalLength) {
@@ -19,7 +32,11 @@ public class Solution {
     }
 
     public String longestPalindrome(String s) {
+        // Reset all counters
         comparisonCount = 0L;
+        outerLoopCount = 0L;
+        positionChecks = 0L;
+        earlyTerminations = 0L;
 
         if (s == null || s.length() == 0) {
             return "";
@@ -39,7 +56,7 @@ public class Solution {
             str[i * 2 + 2] = '#';
         }
 
-        // Step 2: Calculate best-case potential for each position
+        // Step 2: Calculate best-case potential
         int[] bestCase = new int[n];
         for (int i = 0; i < n; i++) {
             int dist = Math.min(i, n - 1 - i);
@@ -50,15 +67,17 @@ public class Solution {
         int bestCenter = 0;
         int mid = n / 2;
 
-        // Step 3: Check centers in priority order (center outward)
+        // Step 3: Check centers in priority order
         for (int offset = 0; mid - offset >= 0 || mid + offset < n; offset++) {
+            outerLoopCount++;
 
             if (offset == 0) {
                 // Check center
                 int idx = mid;
                 if (bestCase[idx] > bestTransLen) {
+                    positionChecks++;
                     int len = expandFromCenter(str, idx);
-                    bestCase[idx] = len; // UPDATE bestCase with actual length
+                    bestCase[idx] = len;
 
                     if (len > bestTransLen) {
                         bestTransLen = len;
@@ -66,7 +85,6 @@ public class Solution {
                     }
                 }
             } else {
-                // Check left and right positions
                 int leftIdx = mid - offset;
                 int rightIdx = mid + offset;
 
@@ -76,19 +94,20 @@ public class Solution {
                 if (!leftValid && !rightValid)
                     break;
 
-                // Determine if positions can potentially beat current best
                 boolean leftCanWin = leftValid && bestCase[leftIdx] > bestTransLen;
                 boolean rightCanWin = rightValid && bestCase[rightIdx] > bestTransLen;
 
-                // Early termination: stop if neither side can win
+                // Early termination check
                 if (!leftCanWin && !rightCanWin) {
+                    earlyTerminations++;
                     break;
                 }
 
-                // Check left position
+                // Check left
                 if (leftCanWin) {
+                    positionChecks++;
                     int len = expandFromCenter(str, leftIdx);
-                    bestCase[leftIdx] = len; // UPDATE bestCase with actual length
+                    bestCase[leftIdx] = len;
 
                     if (len > bestTransLen) {
                         bestTransLen = len;
@@ -96,10 +115,11 @@ public class Solution {
                     }
                 }
 
-                // Check right position
+                // Check right
                 if (rightCanWin) {
+                    positionChecks++;
                     int len = expandFromCenter(str, rightIdx);
-                    bestCase[rightIdx] = len; // UPDATE bestCase with actual length
+                    bestCase[rightIdx] = len;
 
                     if (len > bestTransLen) {
                         bestTransLen = len;
@@ -109,7 +129,7 @@ public class Solution {
             }
         }
 
-        // Step 4: Rebuild palindrome from transformed string
+        // Step 4: Rebuild result
         int radius = (bestTransLen - 1) / 2;
         int L = bestCenter - radius;
         int R = bestCenter + radius;
@@ -125,9 +145,6 @@ public class Solution {
         return res.toString();
     }
 
-    /**
-     * Expand from center and count comparisons
-     */
     private int expandFromCenter(char[] str, int idx) {
         int left = idx - 1;
         int right = idx + 1;

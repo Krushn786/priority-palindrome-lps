@@ -1,126 +1,150 @@
 ======================================
 Input Length: 0
-Input String: 
 Result Length: 0
 Time: 0 ms
 Comparisons: 0
+Outer Loop Count: 0
+Mirror Copies: 0
+Expansion Attempts: 0
+Input String: 
 Palindrome: 
 ======================================
 
 ======================================
 Input Length: 1
-Input String:  
 Result Length: 1
 Time: 0 ms
 Comparisons: 0
+Outer Loop Count: 0
+Mirror Copies: 0
+Expansion Attempts: 0
+Input String:  
 Palindrome:  
 ======================================
 
 ======================================
 Input Length: 2
-Input String: aa
 Result Length: 2
 Time: 0 ms
 Comparisons: 3
+Outer Loop Count: 5
+Mirror Copies: 1
+Expansion Attempts: 3
+Input String: aa
 Palindrome: aa
 ======================================
 
 ======================================
 Input Length: 3
-Input String: aba
 Result Length: 3
 Time: 0 ms
 Comparisons: 6
+Outer Loop Count: 7
+Mirror Copies: 2
+Expansion Attempts: 6
+Input String: aba
 Palindrome: aba
 ======================================
 
 ======================================
 Input Length: 5
-Input String: babad
 Result Length: 3
 Time: 0 ms
 Comparisons: 13
+Outer Loop Count: 11
+Mirror Copies: 4
+Expansion Attempts: 13
+Input String: babad
 Palindrome: bab
 ======================================
 
 ======================================
 Input Length: 4
-Input String: cbbd
 Result Length: 2
 Time: 0 ms
 Comparisons: 10
+Outer Loop Count: 9
+Mirror Copies: 1
+Expansion Attempts: 10
+Input String: cbbd
 Palindrome: bb
 ======================================
 
 ======================================
 Input Length: 7
-Input String: racecar
 Result Length: 7
 Time: 0 ms
 Comparisons: 20
+Outer Loop Count: 15
+Mirror Copies: 6
+Expansion Attempts: 20
+Input String: racecar
 Palindrome: racecar
 ======================================
 
 ======================================
 Input Length: 10000
-Input String (truncated): ajaxeejilmlnqwdznatcqobueeomxikdykafgjyzzsuuvvocitxodjawigdtwijcgkvdoozikbsglvmdmktytjlmifqbwwmlpcsoqshdytwtgpsalccdzrvpiexoappfvtxeprwpozzfvxyzhnxymlcfrsokyarxkwfujfcpgmnhgjeascerncmczyrlkczfumswk...
-Result Length: 6
-Time: 3 ms
-Comparisons: 30809
-Palindrome: pgeegp
+Result Length: 7
+Time: 4 ms
+Comparisons: 30791
+Outer Loop Count: 20001
+Mirror Copies: 1198
+Expansion Attempts: 30791
+Palindrome: bdhyhdb
 ======================================
 
 ======================================
 Input Length: 50000
-Input String (truncated): fxayulzdzcpxhbvkiakbdodvartjfdrakfrvhldmldrbvdtdjpeijhxhxgyxsmrmvidiggasphqhmkwderrecewsxijjtojklgyznardsajhxcgonnkddgpygyxklbbiyyvjrweowhuwqjuaaadfvpjrstcgapbuysrlthcwzidzwdhsxlojxcruvqjagekjtgong...
-Result Length: 9
-Time: 10 ms
-Comparisons: 153964
-Palindrome: blgsssglb
+Result Length: 7
+Time: 9 ms
+Comparisons: 153969
+Outer Loop Count: 100001
+Mirror Copies: 6052
+Expansion Attempts: 153969
+Palindrome: esdedse
 ======================================
 
 ======================================
 Input Length: 100000
-Input String (truncated): nyovoqslrvpuhaayfgdjkvvuahvosyydfkkmgwxaqmoeknohbbcwnwdjzwoiqamktseayevyomuoltflcshwydraoptsbyajjdvovhtmgaymklrwslyhabzotathnjkfycdmvmpvyvzooyequokhgaxxqdsldinnuncldwtbopqwipejclshloppwoxoaahozoouw...
-Result Length: 8
-Time: 5 ms
-Comparisons: 307814
-Palindrome: yamffmay
+Result Length: 7
+Time: 24 ms
+Comparisons: 307782
+Outer Loop Count: 200001
+Mirror Copies: 11896
+Expansion Attempts: 307782
+Palindrome: invivni
 ======================================
 
 ======================================
 Input Length: 200000
-Input String (truncated): wrsikehazngsjjbpvxngayftgopfdffgtcwfklsdkkznlfsmhzhzhnodqjudspvojhsvvkbqrpdlmizdilqjuhxsxpavokrnyngwxqkbakgxsfefipofqomgvxiixqtbyymjpdylxoehhvoeelctzzybkbesiamciwkhkixhuxqxyjfqixosogcllsjcogidybgms...
 Result Length: 9
-Time: 70 ms
-Comparisons: 615934
-Palindrome: hxpgkgpxh
+Time: 24 ms
+Comparisons: 615412
+Outer Loop Count: 400001
+Mirror Copies: 23421
+Expansion Attempts: 615412
+Palindrome: nbthchtbn
 ======================================
 
 ======================================
 Input Length: 1000000
-Input String (truncated): fdvmptxuyoqgmlyzwruxvprnmxhigcmxoxwanhftfymgvtglmjgkbdhdpyyksagxfyhnrafohiwgldvbswtkxdnkcyplvwgkshyqkjhmaaujfdkmkrgcdweirpfgwhsppnfxbwvaobtqajkelwzxmmvbeucklwzhkrbqtmqgxpiffdgzqicvybxklnbmhqimjvxtn...
 Result Length: 9
-Time: 37 ms
-Comparisons: 3078155
-Palindrome: sxqovoqxs
+Time: 30 ms
+Comparisons: 3078154
+Outer Loop Count: 2000001
+Mirror Copies: 119318
+Expansion Attempts: 3078154
+Palindrome: tigyqygit
 ======================================
 
 ======================================
 Input Length: 10000000
-Input String (truncated): einvibecvkttjoigtucbjypzkontiwjyixdvazehdviruvhwlyhsvghvreynshpfjrxxhikvjltkejyyaycmetyohrncxnmmhasdjlcfytxasfmhvvhyajofwvfxnpgzfxswghpvnnuegmtqfxmawkxjftaiqeaznkvkolsknewhcoyutgvumwzrujwneuwformxb...
-Result Length: 11
-Time: 269 ms
-Comparisons: 30783407
-Palindrome: bvstrdrtsvb
-======================================
-
-======================================
-Input Length: 50000000
-Input String (truncated): ymivnzjmusrngydnwzsexfyqjkhxeruwutfazcbjjdccteayvmtmcqimzqongwdhwhbcbowytkunquugzjiooltccpnqsqjkexxohzxsbnowygnqhaidrsymrcdxzfqqdcrsnvyombptikiagghyjpoazvmjfddyuklelqxcqjcdeudfmqwwszdohrrygnkfnywrl...
-Result Length: 13
-Time: 1645 ms
-Comparisons: 153912616
-Palindrome: exkyivvviykxe
+Result Length: 10
+Time: 265 ms
+Comparisons: 30783021
+Outer Loop Count: 20000001
+Mirror Copies: 1196656
+Expansion Attempts: 30783021
+Palindrome: jkyvxxvykj
 ======================================
 

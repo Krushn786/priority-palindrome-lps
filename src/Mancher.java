@@ -1,24 +1,39 @@
 /**
- * Manacher's algorithm for Longest Palindromic Substring.
- * Bare version: no logging, just comparison counting.
+ * Manacher's algorithm with detailed tracking
  */
 public class Mancher {
 
-    // Count of character comparisons in the expansion step
     private long comparisonCount = 0L;
+    private long outerLoopCount = 0L;
+    private long mirrorCopies = 0L;
+    private long expansionAttempts = 0L;
 
     public long getComparisonCount() {
         return comparisonCount;
     }
 
-    // Transformed length helper (same #a#b#c# style as Solution)
+    public long getOuterLoopCount() {
+        return outerLoopCount;
+    }
+
+    public long getMirrorCopies() {
+        return mirrorCopies;
+    }
+
+    public long getExpansionAttempts() {
+        return expansionAttempts;
+    }
+
     public static int getTransformedLength(int originalLength) {
         return 2 * originalLength + 1;
     }
 
     public String longestPalindrome(String s) {
-        // reset counter
+        // Reset counters
         comparisonCount = 0L;
+        outerLoopCount = 0L;
+        mirrorCopies = 0L;
+        expansionAttempts = 0L;
 
         if (s == null || s.length() == 0) {
             return "";
@@ -27,7 +42,7 @@ public class Mancher {
             return s;
         }
 
-        // Transform s -> t with '#' between chars
+        // Transform with '#'
         StringBuilder sb = new StringBuilder();
         sb.append('#');
         for (char c : s.toCharArray()) {
@@ -36,7 +51,7 @@ public class Mancher {
         String t = sb.toString();
         int n = t.length();
 
-        int[] p = new int[n]; // radius at each center in transformed string
+        int[] p = new int[n];
         int center = 0;
         int right = 0;
 
@@ -44,20 +59,24 @@ public class Mancher {
         int bestRadius = 0;
 
         for (int i = 0; i < n; i++) {
+            outerLoopCount++;
+
             int mirror = 2 * center - i;
 
             if (i < right) {
                 p[i] = Math.min(p[mirror], right - i);
+                mirrorCopies++;
             } else {
                 p[i] = 0;
             }
 
-            // Attempt to expand around i
+            // Attempt expansion
             int a = i + p[i] + 1;
             int b = i - p[i] - 1;
 
             while (b >= 0 && a < n) {
-                comparisonCount++; // we are about to compare t[a] and t[b]
+                expansionAttempts++;
+                comparisonCount++;
                 if (t.charAt(a) == t.charAt(b)) {
                     p[i]++;
                     a++;
@@ -67,7 +86,7 @@ public class Mancher {
                 }
             }
 
-            // Update rightmost palindrome
+            // Update rightmost
             if (i + p[i] > right) {
                 center = i;
                 right = i + p[i];
@@ -80,16 +99,15 @@ public class Mancher {
             }
         }
 
-        // Map (bestCenter, bestRadius) back to original indices
+        // Rebuild result
         int L = bestCenter - bestRadius;
         int R = bestCenter + bestRadius;
 
-        // First and last odd indices in [L, R] correspond to real characters
         int firstOdd = (L % 2 == 1) ? L : L + 1;
         int lastOdd = (R % 2 == 1) ? R : R - 1;
 
-        int start = (firstOdd - 1) / 2; // index in original string
-        int end = (lastOdd - 1) / 2; // index in original string
+        int start = (firstOdd - 1) / 2;
+        int end = (lastOdd - 1) / 2;
 
         if (start < 0)
             start = 0;
