@@ -24,6 +24,7 @@ public class Benchmark {
                 "babad",
                 "cbbd",
                 "racecar",
+                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccc",
                 generateRandomString(10_000),
                 generateRandomString(50_000),
                 generateRandomString(100_000),
@@ -36,9 +37,9 @@ public class Benchmark {
                 PrintWriter noviceTxt = new PrintWriter(new FileWriter("output/Novice.txt"));
                 PrintWriter mancherTxt = new PrintWriter(new FileWriter("output/Mancher.txt"))) {
 
-            // Enhanced CSV header
+            // Enhanced CSV header with input and result strings
             csv.println(
-                    "algorithm,original_length,transformed_length,total_comparisons,outer_loop_count,position_checks,early_terminations,palindrome_length,time_ms");
+                    "algorithm,original_length,transformed_length,total_comparisons,outer_loop_count,position_checks,early_terminations,palindrome_length,time_ms,input_string,result_palindrome");
 
             // NOVICE
             System.out.println("\n========== RUNNING NOVICE ALGORITHM ==========");
@@ -65,8 +66,13 @@ public class Benchmark {
                 System.out.println("Time: " + timeMs + " ms");
                 System.out.println("Palindrome length: " + ans.length());
 
-                csv.printf("\"Novice\",%d,%d,%d,%d,%d,%d,%d,%d%n",
-                        n, transformedLength, comps, outerLoop, posChecks, earlyTerm, ans.length(), timeMs);
+                // Format strings for CSV (escape and truncate if needed)
+                String inputStr = formatForCSV(t, 100);
+                String resultStr = formatForCSV(ans, 100);
+
+                csv.printf("\"Novice\",%d,%d,%d,%d,%d,%d,%d,%d,\"%s\",\"%s\"%n",
+                        n, transformedLength, comps, outerLoop, posChecks, earlyTerm, ans.length(), timeMs,
+                        inputStr, resultStr);
 
                 noviceTxt.println("======================================");
                 noviceTxt.println("Input Length: " + n);
@@ -90,8 +96,6 @@ public class Benchmark {
 
             // MANACHER
             System.out.println("\n\n========== RUNNING MANACHER ALGORITHM ==========");
-            csv.println(
-                    "algorithm,original_length,transformed_length,total_comparisons,outer_loop_count,mirror_copies,expansion_attempts,palindrome_length,time_ms");
 
             for (String t : tests) {
                 int n = t.length();
@@ -116,8 +120,13 @@ public class Benchmark {
                 System.out.println("Time: " + timeMs + " ms");
                 System.out.println("Palindrome length: " + ans.length());
 
-                csv.printf("\"Manacher\",%d,%d,%d,%d,%d,%d,%d,%d%n",
-                        n, transformedLength, comps, outerLoop, mirrors, expansions, ans.length(), timeMs);
+                // Format strings for CSV
+                String inputStr = formatForCSV(t, 100);
+                String resultStr = formatForCSV(ans, 100);
+
+                csv.printf("\"Manacher\",%d,%d,%d,%d,%d,%d,%d,%d,\"%s\",\"%s\"%n",
+                        n, transformedLength, comps, outerLoop, mirrors, expansions, ans.length(), timeMs,
+                        inputStr, resultStr);
 
                 mancherTxt.println("======================================");
                 mancherTxt.println("Input Length: " + n);
@@ -147,6 +156,23 @@ public class Benchmark {
         System.out.println("  output/benchmark_results.csv");
         System.out.println("  output/Novice.txt");
         System.out.println("  output/Mancher.txt");
+    }
+
+    /**
+     * Format string for CSV output - escape quotes and truncate if needed
+     */
+    private static String formatForCSV(String s, int maxLength) {
+        if (s == null || s.isEmpty()) {
+            return "";
+        }
+
+        // Truncate if too long
+        String result = s.length() <= maxLength ? s : s.substring(0, maxLength - 3) + "...";
+
+        // Escape double quotes by doubling them (CSV standard)
+        result = result.replace("\"", "\"\"");
+
+        return result;
     }
 
     private static String generateRandomString(int n) {

@@ -83,68 +83,80 @@ Palindrome: racecar
 ======================================
 
 ======================================
+Input Length: 91
+Result Length: 31
+Time: 0 ms
+Comparisons: 299
+Outer Loop Count: 183
+Mirror Copies: 173
+Expansion Attempts: 299
+Input String: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccc
+Palindrome: ccccccccccccccccccccccccccccccc
+======================================
+
+======================================
 Input Length: 10000
-Result Length: 7
+Result Length: 6
 Time: 4 ms
-Comparisons: 30791
+Comparisons: 30732
 Outer Loop Count: 20001
-Mirror Copies: 1198
-Expansion Attempts: 30791
-Palindrome: bdhyhdb
+Mirror Copies: 1121
+Expansion Attempts: 30732
+Palindrome: njwwjn
 ======================================
 
 ======================================
 Input Length: 50000
 Result Length: 7
-Time: 9 ms
-Comparisons: 153969
+Time: 8 ms
+Comparisons: 153906
 Outer Loop Count: 100001
-Mirror Copies: 6052
-Expansion Attempts: 153969
-Palindrome: esdedse
+Mirror Copies: 5965
+Expansion Attempts: 153906
+Palindrome: lpzozpl
 ======================================
 
 ======================================
 Input Length: 100000
 Result Length: 7
-Time: 24 ms
-Comparisons: 307782
+Time: 7 ms
+Comparisons: 307798
 Outer Loop Count: 200001
-Mirror Copies: 11896
-Expansion Attempts: 307782
-Palindrome: invivni
+Mirror Copies: 11943
+Expansion Attempts: 307798
+Palindrome: nfmtmfn
 ======================================
 
 ======================================
 Input Length: 200000
-Result Length: 9
-Time: 24 ms
-Comparisons: 615412
+Result Length: 7
+Time: 58 ms
+Comparisons: 615622
 Outer Loop Count: 400001
-Mirror Copies: 23421
-Expansion Attempts: 615412
-Palindrome: nbthchtbn
+Mirror Copies: 23852
+Expansion Attempts: 615622
+Palindrome: tuzmzut
 ======================================
 
 ======================================
 Input Length: 1000000
 Result Length: 9
-Time: 30 ms
-Comparisons: 3078154
+Time: 75 ms
+Comparisons: 3078796
 Outer Loop Count: 2000001
-Mirror Copies: 119318
-Expansion Attempts: 3078154
-Palindrome: tigyqygit
+Mirror Copies: 120444
+Expansion Attempts: 3078796
+Palindrome: myhrarhym
 ======================================
 
 ======================================
 Input Length: 10000000
-Result Length: 10
-Time: 265 ms
-Comparisons: 30783021
+Result Length: 11
+Time: 357 ms
+Comparisons: 30782627
 Outer Loop Count: 20000001
-Mirror Copies: 1196656
-Expansion Attempts: 30783021
-Palindrome: jkyvxxvykj
+Mirror Copies: 1195682
+Expansion Attempts: 30782627
+Palindrome: ujzcjdjczju
 ======================================
 

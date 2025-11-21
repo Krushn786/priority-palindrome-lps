@@ -27,7 +27,7 @@ Input Length: 2
 Result Length: 2
 Time: 0 ms
 Comparisons: 2
-Outer Loop Count: 2
+Outer Loop Count: 1
 Position Checks: 1
 Early Terminations: 1
 Input String: aa
@@ -39,7 +39,7 @@ Input Length: 3
 Result Length: 3
 Time: 0 ms
 Comparisons: 3
-Outer Loop Count: 2
+Outer Loop Count: 1
 Position Checks: 1
 Early Terminations: 1
 Input String: aba
@@ -50,9 +50,9 @@ Palindrome: aba
 Input Length: 5
 Result Length: 3
 Time: 0 ms
-Comparisons: 6
+Comparisons: 5
 Outer Loop Count: 3
-Position Checks: 3
+Position Checks: 2
 Early Terminations: 1
 Input String: babad
 Palindrome: aba
@@ -62,9 +62,9 @@ Palindrome: aba
 Input Length: 4
 Result Length: 2
 Time: 0 ms
-Comparisons: 7
+Comparisons: 5
 Outer Loop Count: 3
-Position Checks: 3
+Position Checks: 2
 Early Terminations: 1
 Input String: cbbd
 Palindrome: bb
@@ -75,7 +75,7 @@ Input Length: 7
 Result Length: 7
 Time: 0 ms
 Comparisons: 7
-Outer Loop Count: 2
+Outer Loop Count: 1
 Position Checks: 1
 Early Terminations: 1
 Input String: racecar
@@ -83,68 +83,80 @@ Palindrome: racecar
 ======================================
 
 ======================================
-Input Length: 10000
-Result Length: 7
-Time: 2 ms
-Comparisons: 31601
-Outer Loop Count: 9994
-Position Checks: 19985
+Input Length: 91
+Result Length: 30
+Time: 0 ms
+Comparisons: 990
+Outer Loop Count: 62
+Position Checks: 61
 Early Terminations: 1
-Palindrome: bdhyhdb
+Input String: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccc
+Palindrome: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+======================================
+
+======================================
+Input Length: 10000
+Result Length: 5
+Time: 2 ms
+Comparisons: 15792
+Outer Loop Count: 9996
+Position Checks: 9995
+Early Terminations: 1
+Palindrome: owhwo
 ======================================
 
 ======================================
 Input Length: 50000
-Result Length: 7
-Time: 10 ms
-Comparisons: 158115
-Outer Loop Count: 49994
-Position Checks: 99985
+Result Length: 5
+Time: 9 ms
+Comparisons: 78900
+Outer Loop Count: 49996
+Position Checks: 49995
 Early Terminations: 1
-Palindrome: esdedse
+Palindrome: jxdxj
 ======================================
 
 ======================================
 Input Length: 100000
 Result Length: 7
 Time: 6 ms
-Comparisons: 315867
+Comparisons: 157973
 Outer Loop Count: 99994
-Position Checks: 199985
+Position Checks: 99993
 Early Terminations: 1
-Palindrome: otxjxto
+Palindrome: sdzuzds
 ======================================
 
 ======================================
 Input Length: 200000
-Result Length: 9
-Time: 14 ms
-Comparisons: 631445
-Outer Loop Count: 199992
-Position Checks: 399981
+Result Length: 7
+Time: 13 ms
+Comparisons: 315887
+Outer Loop Count: 199994
+Position Checks: 199993
 Early Terminations: 1
-Palindrome: nbthchtbn
+Palindrome: zkupukz
 ======================================
 
 ======================================
 Input Length: 1000000
-Result Length: 9
-Time: 79 ms
-Comparisons: 3159577
-Outer Loop Count: 999992
-Position Checks: 1999981
+Result Length: 8
+Time: 28 ms
+Comparisons: 1579904
+Outer Loop Count: 999993
+Position Checks: 999992
 Early Terminations: 1
-Palindrome: ntapjpatn
+Palindrome: ejhllhje
 ======================================
 
 ======================================
 Input Length: 10000000
-Result Length: 10
-Time: 211 ms
-Comparisons: 31599107
-Outer Loop Count: 9999991
-Position Checks: 19999979
+Result Length: 11
+Time: 261 ms
+Comparisons: 15800233
+Outer Loop Count: 9999990
+Position Checks: 9999989
 Early Terminations: 1
-Palindrome: jkyvxxvykj
+Palindrome: civtemetvic
 ======================================
 

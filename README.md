@@ -97,3 +97,50 @@ See LICENSE for details.
 ✍️ Author
 Krushna Gor
 Creator of this priority-based O(n) algorithm for LPS.
+
+
+
+let's just use 2 ptr going forward
+Ex: a b c
+Expand:    # a # b # c #
+Best Case: 0 1 2 3 4 5 6
+
+Parent center:b bestCase=3 leftPtr=center rightPtr=center
+check # = # (1)
+check a = c break change bestCase 3->1
+move leftPtr->left 
+leftPtr--;
+check if rightPtr bestCase < leftPtr bestCase
+                  1<3
+                  rightPtr++;
+
+parent leftPtr:# bestCase = 2
+check: a = b break change leftPtr bestCase -> 0
+check 
+if(leftPtr bestCase < rightPtr bestCase)
+   continue to right
+   leftPtr--;
+else
+   break and return
+
+continue (0<2)
+parent leftPtr:# bestCase = 2
+check: c = b break change leftPtr bestCase -> 0
+check 
+if(rightPtr bestCase < leftPtr bestCase)
+   continue to left
+   rightPtr++;
+else
+   break and return
+
+continue (0<1)
+parent leftPtr:a bestCase = 1
+check # = # (1) (NO need to check further) 1 = bestCase
+thus found
+
+break and Return 1: longest Palandromic String a
+
+so here we skipped: 
+-) # to the left of a
+-) current rightPtr c
+-) # to the right of c
